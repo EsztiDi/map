@@ -1,0 +1,198 @@
+:root {
+  font-size: 1.105vw;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f6d7a9;
+  border-radius: 25px;
+}
+::-webkit-scrollbar-corner {
+  background: #f6d7a9;
+}
+::-webkit-scrollbar-thumb {
+  background: #e8bd87;
+  border-radius: 25px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4a975;
+}
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+#map {
+  position: relative;
+  width: 100vw;
+  height: calc(100vw * 1.105);
+  background: url("../images/map.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.location {
+  position: absolute;
+  cursor: pointer;
+  width: 0.75rem;
+  height: 1.1rem;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border: 0.2rem solid #000;
+}
+i.location {
+  width: 1.5rem;
+  height: 1.5rem;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1;
+}
+.text {
+  position: absolute;
+  cursor: pointer;
+  background: #2d261c;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: cursive;
+  border-radius: 0.8rem;
+  border: 0.2rem solid #000;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: translate(calc(-50% + 1.2rem), 90%) scale(0);
+      -ms-transform: translate(calc(-50% + 1.2rem), 90%) scale(0);
+          transform: translate(calc(-50% + 1.2rem), 90%) scale(0);
+  -webkit-transition-property: visibility, opacity, -webkit-transform;
+  transition-property: visibility, opacity, -webkit-transform;
+  -o-transition-property: visibility, opacity, transform;
+  transition-property: visibility, opacity, transform;
+  transition-property: visibility, opacity, transform, -webkit-transform;
+  -webkit-transition-duration: 0.3s;
+        -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+.text::after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 0.19rem);
+  left: 0.6rem;
+  border: 0.5rem solid;
+  border-color: #000 transparent transparent transparent;
+}
+.location:hover + .text, .text.show {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translate(0) scale(1);
+      -ms-transform: translate(0) scale(1);
+          transform: translate(0) scale(1);
+}
+.maria.location {
+  top: 22.30%; left: 35.70%;
+}
+.maria + .text {
+  bottom: 78.90%; left: 35.20%;
+}
+.akame.location{
+  top: 43.95%; left: 28.50%;
+}
+.akame + .text {
+  bottom: 57.25%; left: 28.00%;
+}
+.pub.location{
+  width: 0.75rem;
+  height: 1.3rem;
+  top: 46.65%; left: 31.47%;
+}
+.pub + .text {
+  bottom: 54.55%; left: 30.57%;
+}
+.lantern.location{
+  top: 49.55%; left: 28.62%;
+}
+.lantern + .text {
+  bottom: 51.65%; left: 27.72%;
+}
+.dragon.location {
+  top: 52.40%; left: 21.05%;
+}
+.dragon + .text {
+  bottom: 48.80%; left: 20.15%;
+}
+.palace.location {
+  top: 52.60%; left: 36.41%;
+}
+.palace + .text {
+  bottom: 48.60%; left: 35.51%;
+}
+.police.location {
+  top: 56.70%; left: 28.95%;
+}
+.police + .text {
+  bottom: 44.50%; left: 28.05%;
+}
+.hatstore.location {
+  top: 59.56%; left: 26.85%;
+}
+.hatstore + .text {
+  bottom: 41.64%; left: 25.95%;
+}
+.gazette.location {
+  top: 57.80%; left: 39.85%;
+}
+.gazette + .text {
+  bottom: 43.30%; left: 38.95%;
+}
+.smith.location {
+  top: 61.90%; left: 32.37%;
+}
+.smith + .text {
+  bottom: 39.30%; left: 31.47%;
+}
+.burnt.location {
+  top: 65.52%; left: 27.22%;
+}
+.burnt + .text {
+  bottom: 35.68%; left: 26.32%;
+}
+.slatroog.location {
+  top: 66.96%; left: 34.45%;
+}
+.slatroog + .text {
+  bottom: 34.24%; left: 33.55%;
+}
+.viktor.location {
+  width: 1.3rem;
+  height: 2.3rem;
+  top: 67.75%; left: 53.15%;
+}
+.viktor + .text {
+  bottom: 33.45%; left: 52.80%;
+}
+.hall.location {
+  width: 1.3rem;
+  height: 2.3rem;
+  top: 67.80%; left: 57.65%;
+}
+.hall + .text {
+  bottom: 33.40%; left: 57.30%;
+}
+.baron.location {
+  width: 0.8rem;
+  height: 1.15rem;
+  -webkit-transform: rotate(-70deg);
+      -ms-transform: rotate(-70deg);
+          transform: rotate(-70deg);
+  top: 79.75%; left: 34.95%;
+}
+.baron + .text {
+  bottom: 21.45%; left: 33.95%;
+}

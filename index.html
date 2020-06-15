@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A map for our RPG game"/>
+  <meta name="theme-color" content="#f6d7a9"/>
+  <title>Vancouver 1887</title>
+  <link rel="shortcut icon" href="./images/favicon.ico">
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+  <div id="map">
+
+    <i class="maria location">&#x2718;</i>
+    <div class="text">Ss. Maria Antonietta</div>
+
+    <i class="akame location">&#x2718;</i>
+    <div class="text">Princess Akame Jhacarandha's Cargo Ship</div>
+
+    <div class="pub location"></div>
+    <div class="text">Anchor & Hawser Pub</div>
+
+    <div class="lantern location"></div>
+    <div class="text">Maeve's Opium Den <br> "The Red Lantern"</div>
+
+    <div class="dragon location"></div>
+    <div class="text">Opium Den <br> "The Jade Dragon"</div>
+
+    <div class="palace location"></div>
+    <div class="text">Opium Den <br> "The Golden Palace"</div>
+
+    <div class="police location"></div>
+    <div class="text">Police Station <br> (Sheriff Turner)</div>
+
+    <div class="gazette location"></div>
+    <div class="text">Vancouver Gazette</div>
+    
+    <div class="hatstore location"></div>
+    <div class="text">Trevish Hatstore</div>
+
+    <div class="smith location"></div>
+    <div class="text">Dr. Noah Smith</div>
+
+    <div class="burnt location"></div>
+    <div class="text">Burnt Opium Den</div>
+
+    <div class="slatroog location"></div>
+    <div class="text">Slatroog's Home</div>
+    
+    <div class="viktor location"></div>
+    <div class="text">Viktor Von Bach's Mansion</div>
+    
+    <div class="hall location"></div>
+    <div class="text">City Hall <br> (Mayor Powell)</div>
+
+    <div class="baron location"></div>
+    <div class="text">Baron De La Tour's Manor</div>
+
+  </div>
+
+  <script>
+    var map = document.getElementById("map");
+    function showCoords(event) {
+      let mapX = map.scrollWidth, mapY = map.scrollHeight, 
+      x = event.pageX - (mapX * 0.01 * 0.8 / 2), 
+      y = event.pageY - (mapX * 0.01 * 1.1 / 2),
+      top = y / mapY * 100,
+      left = x / mapX * 100,
+      bottom = 100 - top;
+      console.log(`location - top: ${top.toFixed(2)}%; left: ${left.toFixed(2)}%;\ntext - bottom: ${(bottom+1.2).toFixed(2)}%; left: ${(left-0.9).toFixed(2)}%;`);
+    }
+    function showText(el) {
+      if (el.nextElementSibling && el.nextElementSibling.classList.contains("text")) {
+        el.nextElementSibling.classList.toggle("show");  
+      } else if (el.classList.contains("text")) {
+        el.classList.toggle("show");
+      }
+    }
+    map.addEventListener("click", function(event) {
+      showText(event.target);
+      // showCoords(event);
+    });
+  </script>
+</body>
+</html>
